@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokémon Finder</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Pokémon Finder</h1>
+      <br>
+      <form class="col-md-12 pokeForm" action="PUSH" method="post">
+        <div class="col-md-6">
+            <label for="name">Pokémon Name</label>
+            <input id="pokeName" type="text" name="name" class="form-control" placeholder="Name a pokémon">
+        </div>
+        <div class="col-md-6">
+          <label for="number">Pokémon Number</label>
+          <input type="number" name="number" id="pokeNumber" class="form-control" max="251" min="1" placeholder="1 - 251">
+        </div>
+        <div class="col-md-12 buttonDiv">
+          <br>
+          <input type="submit" id="button" name="submit" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <hr>
+      <div class="well pokemonShow">
+        <p>
+          Your pokémon:
+        </p>
+      </div>
+    </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
