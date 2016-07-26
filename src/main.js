@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('.buttonDiv').append('<p class="small" id="explainer">(Give us just a sec to fetch this pokémon)</p>');
     $.ajax({
       method: 'GET',
-      url: 'http://pokeapi.co/api/v2/pokemon/' + id
+      url: 'https://pokeapi.co/api/v2/pokemon/' + id
     }).done(function(results) {
       var sprite = results.sprites.front_default;
       var appendImg = $('<img src="' + sprite + '">');
