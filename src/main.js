@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('form').on('submit', function(event) {
     event.preventDefault();
-    var id = $('#pokeName').val() || $('#pokeNumber').val();
+    var id = $('#pokeName').val().toLowerCase() || $('#pokeNumber').val().toLowerCase();
     $('#button').addClass('disabled').attr('value', 'Loading ...');
     $('.buttonDiv').append('<p class="small" id="explainer">(Give us just a sec to fetch this pokémon)</p>');
     $.ajax({
@@ -20,6 +20,8 @@ $(document).ready(function() {
       } else if (errorThrown === 'TOO MANY REQUESTS'){
       alert("Please try again later; we've went too many requests to the Pokémon server!");
       }
+      $('#explainer').remove();
+      $('#button').removeAttr('value');
     });
   });
 });
