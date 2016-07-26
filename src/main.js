@@ -14,6 +14,7 @@ $(document).ready(function() {
       $('#button').removeClass('disabled');
       $('#button').removeAttr('value');
       $('#explainer').remove();
+      $('form').trigger("reset")
     }).fail(function(jqXHR, textStatus, errorThrown) {
       if (errorThrown === 'NOT FOUND') {
         alert("Oops! Please check the spelling of your pokémon name and try again.")
