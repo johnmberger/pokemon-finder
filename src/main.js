@@ -20,7 +20,6 @@ $(document).ready(function() {
       $('#explainer').remove();
       $('#button').removeAttr('value');
       $('#button').removeClass('disabled');
-    })
     });
   });
 });
