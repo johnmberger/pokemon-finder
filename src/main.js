@@ -16,11 +16,11 @@ $(document).ready(function() {
       $('#explainer').remove();
       $('form').trigger("reset")
     }).fail(function(jqXHR, textStatus, errorThrown) {
-      if (errorThrown === 'NOT FOUND') {
-        alert("Oops! Please check the spelling of your pokémon name and try again.")
-      } else if (errorThrown === 'TOO MANY REQUESTS'){
+      if (errorThrown === 'TOO MANY REQUESTS'){
       alert("Please try again later; we've went too many requests to the Pokémon server!");
-      }
+    } else {
+      alert("Oops! Please check the spelling of your pokémon name and try again.")
+    }
       $('#explainer').remove();
       $('#button').removeAttr('value');
     });
